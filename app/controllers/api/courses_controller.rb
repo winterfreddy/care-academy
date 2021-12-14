@@ -36,7 +36,14 @@ class Api::CoursesController < ApplicationController
     end
 
     def destroy
+        @course = Course.find_by(id: params[:id])
 
+        if @course
+            @course.destroy
+            render json: ["Deleting course successful"], status: 200
+        else
+            render json: ["Deleting course failed, course id not found"], status: 422
+        end
     end
 
     private
