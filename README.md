@@ -1,24 +1,20 @@
-# README
+# CareAcademy Back-End Code Challenge
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This challenge involves creating a public RESTful API for a course database where you can:
+* Create a course with name and release date
+* Read JSON data for all courses
+* Read JSON data for a single course
+* Update a single course with a course id
+* Delete a single course with a course id
 
-Things you may want to cover:
+### Technology used:
+* Ruby
+* Ruby on Rails
+* Postgres
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### To test this challenge,
+* Clone this repository onto your desktop
+* Run ```bundle install ``` to install all gems
+* Run ```bundle exec rails db:create``` to create a Postgres database for this challenge
+* Run ```rails s``` to start the server
+* Then use Postman or similar to test the routes
