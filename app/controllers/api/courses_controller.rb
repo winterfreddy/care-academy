@@ -24,7 +24,15 @@ class Api::CoursesController < ApplicationController
     end
 
     def update
+        @course = Course.find_by(id: params[:id])
 
+        if @course && @course.update!(course_params)
+            render :show
+        elsif !@course
+            render json: ["Updating course failed, course id not found"], status: 422
+        else
+            render json: @course.errors.full_messages, status: 422
+        end
     end
 
     def destroy
