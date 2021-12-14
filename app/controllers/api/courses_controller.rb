@@ -33,7 +33,7 @@ class Api::CoursesController < ApplicationController
 
     private
     def course_params
-        self.params.require(:course).permit(:name, :release_date)
+        self.params.permit(:name, :release_date)
     end
     
 end
